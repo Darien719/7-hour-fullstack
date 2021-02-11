@@ -1,0 +1,39 @@
+<br><br><br>
+
+
+ 
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-1">
+
+        </div>
+        <div class="card" style="width: 110%;">
+            <div class="card-body">
+                <h1 style="text-align: center;">Create a List</h1>
+                <div class="col-lg">
+                    <form [formGroup]="listgroup" (submit)='postList'>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="name" formControlName="name">
+                            </div>
+
+                        </div>
+                        <label for="lbl_description" class="form-label">Note</label>
+                        <div class="form-floating">
+
+                            <textarea class="form-control" style="height: 300px" placeholder="Description"
+                                id="description-textarea"  form="create-reimb"></textarea>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" id="submitButton" (click)="postList(listgroup)">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+    </div>
+</div> 

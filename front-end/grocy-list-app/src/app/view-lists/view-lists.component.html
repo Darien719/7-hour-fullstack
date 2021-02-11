@@ -1,0 +1,49 @@
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row gx-10">
+        <div class="card" style="width: 110%;">
+            <div class="card-body">
+                <div class="col-sm">
+                    <div style="clear: both">
+                        <h1 style="color: black; text-align: center;" id="title">View Lists</h1>
+                    </div>
+                    <br>
+                    <br>
+                    <table class = 'table table-dark'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Note</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         <tr *ngFor = "let temp of lists"> 
+                                <td>
+                                    {{temp.id}}
+                                </td>
+                                <td>
+                                    {{temp.name}}
+                                </td>
+                                <td>
+                                    For this weekend
+                                </td>
+                                <td>
+                                    <div class="btn-toolbar">
+                                    <button type="button" class="btn btn-primary mr-1" routerLink='/view-items/{{temp.id}}'>View</button>
+                                    <button type="button" class="btn btn-danger mr-1"  (click)='deleteList(temp.id)'>Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4">
+        </div>
+    </div>
+</div> 
